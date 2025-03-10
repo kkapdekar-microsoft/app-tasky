@@ -2,7 +2,7 @@ package auth
 
 import (
 	"net/http"
-	"os"
+	//"os"
 	"time"
 
 	"github.com/dgrijalva/jwt-go"
@@ -13,7 +13,8 @@ type Claims struct {
 	Username string `json:"username"`
 	jwt.StandardClaims
 }
-var SECRET_KEY string = os.Getenv("SECRET_KEY")
+//var SECRET_KEY string = os.Getenv("SECRET_KEY")
+var SECRET_KEY string = "secret123"
 
 func ValidateSession(c * gin.Context) (bool){
 	cookie, err := c.Cookie("token")

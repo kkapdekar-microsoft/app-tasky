@@ -4,7 +4,8 @@ import (
 	"context"
 	"fmt"
 	"log"
-	"os"
+
+	//"os"
 	"time"
 
 	"github.com/joho/godotenv"
@@ -16,7 +17,9 @@ var Client *mongo.Client = CreateMongoClient()
 
 func CreateMongoClient() *mongo.Client {
 	godotenv.Overload()
-	MongoDbURI := os.Getenv("MONGODB_URI")
+	//MongoDbURI := os.Getenv("MONGODB_URI")
+	MongoDbURI := "mongodb://myUserAdmin:abc123@10.0.0.2:27017"
+	log.Print("output of var MONGODB_URI -> " + MongoDbURI)
 	client, err := mongo.NewClient(options.Client().ApplyURI(MongoDbURI))
 	if err != nil {
 		log.Fatal(err)
