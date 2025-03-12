@@ -1,5 +1,1 @@
-kkap info
-
-var SECRET_KEY string = "secret123" // in auth.go
-
-MongoDbURI := "mongodb://myUserAdmin:abc123@10.0.0.2:27017" // in database.go
+kkap says wizexercise.txt is part of code compilation

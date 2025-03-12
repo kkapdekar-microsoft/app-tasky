@@ -42,7 +42,7 @@ git config --global user.name kkap-one
 ```
 3. set user email
 ```bash
-git config --global user.email triplek.k@gmail.com
+git config --global user.email kkap-one
 ```
 4. Add the files in your new local repository. This stages them for the commit.
 ```bash

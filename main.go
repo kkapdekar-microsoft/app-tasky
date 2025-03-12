@@ -1,9 +1,12 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
-	controller "github.com/jeffthorne/tasky/controllers"
+	"os"
+
 	"github.com/gin-gonic/gin"
+	controller "github.com/jeffthorne/tasky/controllers"
 	"github.com/joho/godotenv"
 )
 
@@ -11,8 +14,15 @@ func index(c *gin.Context) {
 	c.HTML(http.StatusOK, "login.html", nil)
 }
 
+func openFileReadContent () {
+	fileContent, _ := os.ReadFile("wizexercise.txt")
+	fmt.Print(string(fileContent))
+}
+
 func main() {
 	godotenv.Overload()
+
+	openFileReadContent()
 	
 	router := gin.Default()
 	router.LoadHTMLGlob("assets/*.html")
