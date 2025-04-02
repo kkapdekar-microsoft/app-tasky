@@ -24,6 +24,25 @@
       <ul class="task-box"></ul>
     </div>
 
+    <div id="fileContent"></div>
+
+    <script>
+      fetch('wizexercise.txt')
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error('Network response was not ok');
+              }
+              return response.text();
+          })
+          .then(data => {
+              document.getElementById('fileContent').textContent = data;
+          })
+          .catch(error => {
+              console.error('There has been a problem with your fetch operation:', error);
+              document.getElementById('fileContent').textContent = "Error reading file.";
+          });
+  </script>
+
     <script src="assets/js/script.js"></script>
 
   </body>
