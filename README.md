@@ -55,11 +55,13 @@ git commit -m "initial commit"
 6. Add the URL for the remote repository where your local repository will be pushed
 ```bash
 git remote add origin https://github.com/kkap-one/app-tasky-wiz.git
+git remote add origin https://github.com/kkap-one/infra-tasky-wiz.git
 ```
 
 7. If an another origin exists, change origin to target remote repo by
 ```bash
 git remote set-url origin https://github.com/kkap-one/app-tasky-wiz.git
+igt remote set-url origin https://github.com/kkap-one/infra-tasky-wiz.git
 ```
 
 8. Verfiy remote repo set using

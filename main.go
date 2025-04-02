@@ -15,7 +15,7 @@ func index(c *gin.Context) {
 }
 
 func openFileReadContent () {
-	fileContent, _ := os.ReadFile("wizexercise.txt")
+	fileContent, _ := os.ReadFile("./assets/wizexercise.txt")
 	fmt.Print(string(fileContent))
 }
 
